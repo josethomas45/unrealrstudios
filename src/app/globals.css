@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'NeueMontreal-Regular';
+  src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal-Medium';
+  src: url('/fonts/NeueMontreal-Medium.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal-Bold';
+  src: url('/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(82, 82, 82);
+  border-radius: .18rem;
+}
+
+html {
+  scroll-padding-top: 2.5rem;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  letter-spacing: 0.25px;
+}
+
+body {
+  font-family: 'NeueMontreal-Regular';
+}
+
+@media(width<=578px) {
+  html {
+    scroll-padding-top: 3.75rem;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

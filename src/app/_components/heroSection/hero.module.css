@@ -1,0 +1,156 @@
+.hero {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoContainer {
+    width: 100%;
+    position: relative;
+}
+
+.video {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.stats {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stats span {
+    border-radius: 20rem;
+    border: .1px solid rgb(255, 255, 255, .3);
+    padding: .8rem 2rem;
+    color: #fff;
+    background-color: rgba(145, 145, 145, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.heroContent {
+    padding: 4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.head {
+    width: 40%;
+}
+
+.head h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.head p {
+    font-size: 1.5rem;
+}
+
+.text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: .5px;
+}
+
+.text a {
+    width: fit-content;
+    background-color: #000;
+    color: #fff;
+    padding: .8rem 1.5rem;
+    border-radius: .8rem;
+    border: 1px solid #000;
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;
+}
+
+.text a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hr {
+    width: 90%;
+    height: .9px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(170, 170, 170, 0.8);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.socials a {
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.socials a:hover {
+    scale: 1.1;
+}
+
+.instagram a:hover {
+    background-color: #833AB4;
+}
+
+@media(width<=820px) {
+    .heroContent {
+        padding: 4rem 2rem;
+    }
+
+    .head {
+        width: 50%;
+    }
+}
+
+@media(width<=720px) {
+    .heroContent {
+        padding: 4rem 2rem;
+        flex-direction: column;
+    }
+
+    .head,
+    .text {
+        width: 100%;
+    }
+}
+
+@media(width<=578px) {
+    .heroContent {
+        padding: 0.5rem 1rem;
+    }
+
+    .stats {
+        left: 1rem;
+    }
+
+    .stats span {
+        padding: .5rem 1rem;
+        font-size: 0.7rem;
+    }
+}

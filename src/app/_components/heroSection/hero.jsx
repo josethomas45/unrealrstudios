@@ -1,51 +1,63 @@
+'use client';
 import styles from './hero.module.css'
 import { FaLinkedinIn, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
 import Link from 'next/link'
+import { motion } from 'framer-motion';
 
 export default function Hero() {
     return (
         <div className={styles.hero}>
             <div className={styles.videoContainer}>
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    className={styles.video}
+                <motion.div 
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: [0.165, 0.84, 0.44, 1] }}
+                    style={{ width: '100%', height: '100%' }}
                 >
-                    <source
-                        id='webm'
-                        src='/assets/hero.mp4'
-                        type='video/mp4'
-                    />
-                </video>
-                <div className={styles.stats}>
-                    <span>200+ Clients</span>
-                    <span>5+ years of service
-                    </span>
-                </div>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline={true}
+                        className={styles.video}
+                    >
+                        <source
+                            id='webm'
+                            src='/assets/hero-showreel.webm'
+                            type='video/webm'
+                        />
+                        <source
+                            src='/assets/hero.mp4'
+                            type='video/mp4'
+                        />
+                    </video>
+                </motion.div>
+                <div className={styles.videoOverlay}></div>
             </div>
             <div className={styles.heroContent}>
-                <div className={styles.head}>
-                    <h1>Unrealr Studios</h1>
-                    <p>Where Imagination Meets Scalable Production</p>
-                </div>
-                <div className={styles.text}>
-                    <h3>High-quality advertising should not be limited to big brands.</h3>
-                    <p>At Unrealr Studios, we craft visually striking, story-driven content that helps brands stand out—without burning through massive budgets. By combining AI-powered production with traditional filmmaking techniques, we deliver high-quality ads that are fast, flexible, and cost-effective.</p>
-                    <div className={styles.socials}>
-                        {/* <Link href='#'>Contact Us</Link> */}
-                        <Link href="#contact">Contact Us</Link>
-                        <Link 
-                            href="https://www.youtube.com/@UnrealrStudios/shorts"
-                            target="_blank"
-                        ><FaYoutube /></Link>
-                        <Link 
-                            target="_blank"
-                            href="https://www.instagram.com/UnrealrStudios"><FaInstagram /></Link>
+                <motion.div 
+                    className={styles.head}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3, ease: [0.165, 0.84, 0.44, 1] }}
+                >
+                    <h1>CRAFTING SURREAL ADVERTISING, POWERED BY AI.</h1>
+                    <p>WHERE CINEMA MEETS INNOVATION</p>
+                </motion.div>
+                <motion.div 
+                    className={styles.text}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: [0.165, 0.84, 0.44, 1] }}
+                >
+                    <h3>A HYBRID STUDIO DEFINING THE FUTURE OF COMMERCIAL PRODUCTION.</h3>
+                    <p>Unrealr Studios combines LIVE SHOOT, AI, and VFX to deliver SPECTACULAR, LARGE-CANVAS visual campaigns at competitive low costs. Based in London, servicing the UK & EU.</p>
+                    <div className={styles.buttons}>
+                        <Link href="#works" className={styles.primaryBtn}>WATCH OUR REEL</Link>
+                        <Link href="#contact" className={styles.secondaryBtn}>START PROJECT</Link>
                     </div>
-                </div>
+                </motion.div>
             </div>
-            <hr className={styles.hr} />
         </div>
     )
-}
+}

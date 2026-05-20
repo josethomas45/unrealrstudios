@@ -1,118 +1,235 @@
 .showcase {
-    margin: 1rem;
-    padding: 3rem;
-    color: #fff;
-    background-color: #000;
-    border-radius: 2rem;
-    letter-spacing: .5px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  padding: 7rem 4rem;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.showcase h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    font-weight: 900;
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.showcase p {
-    font-size: 1.1rem;
-    color: rgb(182, 182, 182);
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ff6b00;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+.head h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  font-family: 'NeueMontreal-Bold';
+}
+
+.head p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 0.3rem;
+}
+
+/* Two-column grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .card {
-    position: relative;
-    transition: all 0.3s ease-in-out
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #111;
 }
 
-.card .box {
-    border-radius: 1rem;
-    overflow: hidden;
+.card:hover {
+  border-color: rgba(255, 107, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
 }
 
-.card img {
-    width: 100%;
-    height: 18rem;
-    object-fit: cover;
-    transition: all 0.3s ease-in-out;
+/* Video thumbnail area */
+.videoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
 }
 
-.card img:hover {
-    filter: blur(0.1rem);
-    transform: scale(1.08);
-    opacity: 0.8;
+.cardVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.card h2 {
-    padding-top: .5rem;
-    color: rgb(218, 218, 218);
+.card:hover .cardVideo {
+  transform: scale(1.04);
 }
 
-.card p {
-    opacity: 0;
-    color: white;
-    position: absolute;
-    bottom: 3rem;
-    right: 1rem;
-    text-align: right;
-    transition: all 0.3s ease-in-out
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
 }
 
-.card:hover p {
-    opacity: 1;
+.card:hover .overlay {
+  background: rgba(0, 0, 0, 0.25);
 }
 
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(59, 59, 59, 0.8);
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.playBtn {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: rgba(255, 107, 0, 0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding-left: 4px;
+  box-shadow: 0 8px 32px rgba(255, 107, 0, 0.4);
 }
 
-.popupContent {
-    padding: .5rem;
-    position: relative;
-    width: 45rem;
+.card:hover .playBtn {
+  transform: scale(1.1);
+  background: #ff6b00;
+  box-shadow: 0 12px 40px rgba(255, 107, 0, 0.55);
 }
 
-.popupContent iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
+/* Card info below video */
+.cardInfo {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-@media(width<=900px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media(width<=720px) {
-    .container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .popupContent {
-        width: 30rem;
-    }
+.cardMeta h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.3px;
+  font-family: 'NeueMontreal-Bold';
 }
 
-@media(width<=578px) {
-    .showcase {
-        padding: 2rem 1.25rem;
-    }
+.type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ff6b00;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  padding: 0.25rem 0.7rem;
+  border-radius: 2rem;
+}
+
+.cardInfo p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Modal ── */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 72rem;
+}
+
+.modalVideo {
+  width: 100%;
+  border-radius: 0.75rem;
+  display: block;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+}
+
+.closeBtn {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: #ff6b00;
+  border-color: #ff6b00;
+}
+
+@media (width <= 900px) {
+  .showcase { padding: 5rem 2rem; }
+  .head h1 { font-size: 2.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (width <= 480px) {
+  .showcase { padding: 4rem 1rem; }
+  .modal { padding: 1rem; }
+  .closeBtn { top: -2.5rem; }
 }

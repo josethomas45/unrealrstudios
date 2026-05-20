@@ -12,9 +12,9 @@ export default function Footer() {
                 <div className={styles.topSection}>
                     <div className={styles.ctaWrapper}>
                         <h2>Ready to go beyond reality?</h2>
-                        <Link href='#' className={styles.bigCta}>
-                            <h1>Let's Talk <MdArrowOutward className={styles.arrow} /></h1>
-                        </Link>
+                        <a href='mailto:hello@unrealrstudios.com' className={styles.bigCta}>
+                            <h1>Let&apos;s Talk <MdArrowOutward className={styles.arrow} /></h1>
+                        </a>
                     </div>
 
                     <div className={styles.infoWrapper}>

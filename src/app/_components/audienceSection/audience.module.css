@@ -1,0 +1,92 @@
+.audience {
+  padding: 7rem 4rem;
+  background-color: #0a0a0a;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ff6b00;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.left h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-family: 'NeueMontreal-Bold';
+}
+
+.left p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.75;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background-color: rgba(255, 107, 0, 0.1);
+  border-color: rgba(255, 107, 0, 0.4);
+  color: #ff6b00;
+}
+
+.promise {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.75;
+  border-left: 2px solid #ff6b00;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.promise strong {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (width <= 1024px) {
+  .inner { grid-template-columns: 1fr; gap: 3rem; }
+  .right { padding-top: 0; }
+}
+
+@media (width <= 768px) {
+  .audience { padding: 5rem 2rem; }
+  .left h1 { font-size: 2.4rem; }
+}
+
+@media (width <= 480px) {
+  .audience { padding: 4rem 1rem; }
+}

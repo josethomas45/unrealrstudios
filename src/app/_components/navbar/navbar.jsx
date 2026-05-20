@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import white from '../../../../public/assets/whitelogo.png';
 import color from '../../../../public/assets/blacklogo.png';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,12 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={styles.nav}>
+        <motion.nav 
+            className={styles.nav}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: [0.165, 0.84, 0.44, 1] }}
+        >
             <div className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isMobileMenuOpen ? styles.open : ''}`}>
                 <div className={`${styles.menuIcon} ${isMobileMenuOpen ? styles.open : ''}`} onClick={handleMobileMenuToggle}>
                     <div className={styles.bar} />
@@ -79,6 +85,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-        </nav>
+        </motion.nav>
     );
-}
+}

@@ -26,10 +26,6 @@ export default function Hero() {
                             src='/assets/hero-showreel.webm'
                             type='video/webm'
                         />
-                        <source
-                            src='/assets/hero.mp4'
-                            type='video/mp4'
-                        />
                     </video>
                 </motion.div>
                 <div className={styles.videoOverlay}></div>

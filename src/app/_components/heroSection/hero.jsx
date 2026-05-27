@@ -49,8 +49,8 @@ export default function Hero() {
                     <h3>A HYBRID STUDIO DEFINING THE FUTURE OF COMMERCIAL PRODUCTION.</h3>
                     <p>Unrealr Studios combines LIVE SHOOT, AI, and VFX to deliver SPECTACULAR, LARGE-CANVAS visual campaigns at competitive low costs. Based in London, servicing the UK & EU.</p>
                     <div className={styles.buttons}>
-                        <Link href="#works" className={styles.primaryBtn}>WATCH OUR REEL</Link>
-                        <Link href="#contact" className={styles.secondaryBtn}>START PROJECT</Link>
+                        <a href="#works" className={styles.primaryBtn}>WATCH OUR REEL</a>
+                        <a href="#contact" className={styles.secondaryBtn}>START PROJECT</a>
                     </div>
                 </motion.div>
             </div>

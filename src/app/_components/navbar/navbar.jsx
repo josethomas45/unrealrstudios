@@ -29,8 +29,19 @@ export default function Navbar() {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    const handleLinkClick = () => {
-        setIsMobileMenuOpen(false);
+    const handleLinkClick = (e, id) => {
+        if (e && id) {
+            e.preventDefault();
+            setIsMobileMenuOpen(false);
+            const element = document.getElementById(id);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        } else {
+            setIsMobileMenuOpen(false);
+        }
     };
 
     return (
@@ -79,9 +90,9 @@ export default function Navbar() {
                     </Link>
 
                     <div className={styles.linkBlocks}>
-                        <Link href="#services" className={styles.link} onClick={handleLinkClick}><b>Services</b></Link>
-                        <Link href="#works" className={styles.link} onClick={handleLinkClick}><b>Works</b></Link>
-                        <Link href="#contact" className={styles.contact} onClick={handleLinkClick}>Contact</Link>
+                        <a href="#services" className={styles.link} onClick={(e) => handleLinkClick(e, 'services')}><b>Services</b></a>
+                        <a href="#works" className={styles.link} onClick={(e) => handleLinkClick(e, 'works')}><b>Works</b></a>
+                        <a href="#contact" className={styles.contact} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a>
                     </div>
                 </div>
             </div>

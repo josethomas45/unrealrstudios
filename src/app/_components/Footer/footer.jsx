@@ -22,10 +22,10 @@ export default function Footer() {
                             <p className={styles.colTitle}>Visit Us</p>
                             <Link href="#" className={styles.contactItem}>
                                 <div className={styles.iconBox}><FaLocationDot /></div>
-                                <span>19 Sylvia Pankhurst Way<br/>M13 9NJ, Manchester, UK</span>
+                                <span>19 Sylvia Pankhurst Way<br />M13 9NJ, Manchester, UK</span>
                             </Link>
                         </div>
-                        
+
                         <div className={styles.infoCol}>
                             <p className={styles.colTitle}>Contact</p>
                             <Link href="tel:07437481363" className={styles.contactItem}>
@@ -48,7 +48,7 @@ export default function Footer() {
 
                 <div className={styles.bottomSection}>
                     <p>&copy; {new Date().getFullYear()} Unrealr Studios. All rights reserved.</p>
-                    <p>Design & Dev by <Link href="https://muhammedr.me/" target='_blank'><b>MR</b></Link></p>
+                    <p>Design & Dev by <Link href="https://muhammedr.me/" target='_blank'><b>MR</b></Link> & <Link href="https://josethomass.netlify.app/" target='_blank'><b>J</b></Link></p>
                 </div>
             </div>
         </div>

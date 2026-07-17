@@ -235,6 +235,8 @@
     .navbar .links {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         position: absolute;
         top: 0;
         left: 0;
@@ -243,7 +245,7 @@
         background-color: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        padding-top: 8rem;
+        padding-top: 6rem;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);

@@ -7,6 +7,7 @@ import Why from './_components/whySection/why';
 import Process from './_components/processSection/process';
 import Testimonials from './_components/testimonialsSection/testimonials';
 import Audience from './_components/audienceSection/audience';
+import Pricing from './_components/pricingSection/pricing';
 import Contact from './_components/contactSection/contact';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Showcase />
       <Testimonials />
       <Audience />
+      <Pricing />
       <Contact />
       <Footer />
     </>

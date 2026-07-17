@@ -92,6 +92,7 @@ export default function Navbar() {
                     <div className={styles.linkBlocks}>
                         <a href="#services" className={styles.link} onClick={(e) => handleLinkClick(e, 'services')}><b>Services</b></a>
                         <a href="#works" className={styles.link} onClick={(e) => handleLinkClick(e, 'works')}><b>Works</b></a>
+                        <a href="#pricing" className={styles.link} onClick={(e) => handleLinkClick(e, 'pricing')}><b>Pricing</b></a>
                         <a href="#contact" className={styles.contact} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a>
                     </div>
                 </div>

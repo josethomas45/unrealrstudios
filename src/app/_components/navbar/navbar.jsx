@@ -102,7 +102,7 @@ export default function Navbar() {
                         <Link href="/#services" className={styles.link} onClick={(e) => handleLinkClick(e, 'services')}><b>Services</b></Link>
                         <Link href="/#works" className={styles.link} onClick={(e) => handleLinkClick(e, 'works')}><b>Works</b></Link>
                         <Link href="/pricing" className={styles.link} onClick={handleLinkClick}><b>Pricing</b></Link>
-                        <Link href="/#contact" className={styles.contact} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</Link>
+                        <Link href="/#contact" className={`${styles.contact} ${pathname === '/pricing' ? styles.pricingContact : ''}`} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</Link>
                     </div>
                 </div>
             </div>

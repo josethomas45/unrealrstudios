@@ -14,7 +14,7 @@
     transform: translateX(-50%);
     width: 60vw;
     height: 400px;
-    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -67,7 +67,7 @@
 }
 
 .bigCta h1 {
-    font-size: clamp(3rem, 7vw, 7rem);
+    font-size: clamp(2.5rem, 6vw, 6rem);
     font-weight: 800;
     line-height: 1;
     color: #ffffff;
@@ -77,6 +77,7 @@
     gap: 1.5rem;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     letter-spacing: -0.03em;
+    white-space: nowrap;
 }
 
 .arrow {
@@ -154,7 +155,7 @@
 .contactItem:hover .iconBox {
     background: #ffffff;
     color: #000000;
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .marqueeContainer {
@@ -166,7 +167,7 @@
     padding: 1rem 0;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.03) 50%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.03) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 .marquee span {
@@ -186,7 +187,7 @@
 .marqueeContainer:hover .marquee span {
     color: #ffffff;
     -webkit-text-stroke: 1.5px #ffffff;
-    text-shadow: 0 0 25px rgba(255,255,255,0.4);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
 .bottomSection {
@@ -234,11 +235,12 @@
         flex-direction: column;
         gap: 3rem;
     }
+
     .infoWrapper {
         width: 100%;
         justify-content: flex-start;
         gap: 4rem;
-        border-top: 1px solid rgba(255,255,255,0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
         padding-top: 3rem;
     }
 }
@@ -248,15 +250,18 @@
         padding-top: 4rem;
         gap: 4rem;
     }
+
     .infoWrapper {
         flex-direction: column;
         gap: 2.5rem;
     }
+
     .bottomSection {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
     }
+
     .marquee span {
         -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
     }

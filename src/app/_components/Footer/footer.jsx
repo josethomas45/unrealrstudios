@@ -1,6 +1,6 @@
 import styles from './footer.module.css'
 import Link from 'next/link'
-import { FaPhone, FaLocationDot } from "react-icons/fa6";
+import { FaPhone, FaLocationDot, FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa6";
 import { MdOutlineEmail, MdArrowOutward } from "react-icons/md";
 import Marquee from "react-fast-marquee";
 
@@ -35,6 +35,26 @@ export default function Footer() {
                             <Link href="mailto:hello@unrealrstudios.com" className={styles.contactItem}>
                                 <div className={styles.iconBox}><MdOutlineEmail /></div>
                                 <span>hello@unrealrstudios.com</span>
+                            </Link>
+                        </div>
+
+                        <div className={styles.infoCol}>
+                            <p className={styles.colTitle}>Socials</p>
+                            <Link href="https://www.facebook.com/share/1BT649ptfL/?mibextid=wwXIfr" target="_blank" className={styles.contactItem}>
+                                <div className={styles.iconBox}><FaFacebookF /></div>
+                                <span>Facebook</span>
+                            </Link>
+                            <Link href="https://www.instagram.com/unrealrstudios.uk?igsh=MTY4NXhhbG54cHJ1ag%3D%3D&utm_source=qr" target="_blank" className={styles.contactItem}>
+                                <div className={styles.iconBox}><FaInstagram /></div>
+                                <span>Instagram</span>
+                            </Link>
+                            <Link href="https://www.linkedin.com/in/unrealr-studios-6b23a53ab?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" className={styles.contactItem}>
+                                <div className={styles.iconBox}><FaLinkedinIn /></div>
+                                <span>LinkedIn</span>
+                            </Link>
+                            <Link href="https://www.tiktok.com/@unrealr.studios?_r=1&_t=ZP-9875MMcKltH" target="_blank" className={styles.contactItem}>
+                                <div className={styles.iconBox}><FaTiktok /></div>
+                                <span>TikTok</span>
                             </Link>
                         </div>
                     </div>

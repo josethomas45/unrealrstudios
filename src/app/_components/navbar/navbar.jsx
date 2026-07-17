@@ -7,10 +7,13 @@ import Image from 'next/image';
 import white from '../../../../public/assets/whitelogo.png';
 import color from '../../../../public/assets/blacklogo.png';
 import { motion } from 'framer-motion';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const router = useRouter();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,6 +36,12 @@ export default function Navbar() {
         if (e && id) {
             e.preventDefault();
             setIsMobileMenuOpen(false);
+            
+            if (pathname !== '/') {
+                router.push(`/#${id}`);
+                return;
+            }
+
             const element = document.getElementById(id);
             if (element) {
                 setTimeout(() => {
@@ -90,10 +99,10 @@ export default function Navbar() {
                     </Link>
 
                     <div className={styles.linkBlocks}>
-                        <a href="#services" className={styles.link} onClick={(e) => handleLinkClick(e, 'services')}><b>Services</b></a>
-                        <a href="#works" className={styles.link} onClick={(e) => handleLinkClick(e, 'works')}><b>Works</b></a>
-                        <a href="#pricing" className={styles.link} onClick={(e) => handleLinkClick(e, 'pricing')}><b>Pricing</b></a>
-                        <a href="#contact" className={styles.contact} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a>
+                        <Link href="/#services" className={styles.link} onClick={(e) => handleLinkClick(e, 'services')}><b>Services</b></Link>
+                        <Link href="/#works" className={styles.link} onClick={(e) => handleLinkClick(e, 'works')}><b>Works</b></Link>
+                        <Link href="/pricing" className={styles.link} onClick={handleLinkClick}><b>Pricing</b></Link>
+                        <Link href="/#contact" className={styles.contact} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</Link>
                     </div>
                 </div>
             </div>

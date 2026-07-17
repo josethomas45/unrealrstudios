@@ -56,7 +56,7 @@ export default function Pricing() {
   return (
     <section className={styles.pricing} id="pricing">
       {/* Header */}
-      <motion.div 
+      <motion.div
         className={styles.head}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Pricing() {
 
       {/* Intro */}
       <div className={styles.intro}>
-        <motion.div 
+        <motion.div
           className={styles.introLeft}
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -78,10 +78,10 @@ export default function Pricing() {
         >
           <h2>We explain how much video REALLY costs, and how to get the most out of your project</h2>
           <p>
-            Finding how much a promotional video costs to make in the UK can be a frustrating task. 
+            Finding how much a promotional video costs to make in the UK can be a frustrating task.
             The common answers include “how long is a piece of string?” and “well, it depends on a number of factors”.
             <br /><br />
-            The truth is probably somewhere in between. On this page, we’ll explain our video pricing, the 
+            The truth is probably somewhere in between. On this page, we’ll explain our video pricing, the
             factors that affect the cost of video, and exactly what you get for your money.
           </p>
           <a href="#contact" className={styles.quoteBtn}>
@@ -89,7 +89,7 @@ export default function Pricing() {
           </a>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className={styles.factorsContainer}
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -125,8 +125,8 @@ export default function Pricing() {
 
       {/* Factors Detail Sections */}
       <div className={styles.detailSections}>
-        <motion.div 
-          id="complexity" 
+        <motion.div
+          id="complexity"
           className={styles.detailCard}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -151,8 +151,8 @@ export default function Pricing() {
           </div>
         </motion.div>
 
-        <motion.div 
-          id="duration" 
+        <motion.div
+          id="duration"
           className={styles.detailCard}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -174,8 +174,8 @@ export default function Pricing() {
           </div>
         </motion.div>
 
-        <motion.div 
-          id="deliverables" 
+        <motion.div
+          id="deliverables"
           className={styles.detailCard}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +211,7 @@ export default function Pricing() {
         </div>
 
         <div className={styles.phasesGrid}>
-          <motion.div 
+          <motion.div
             className={styles.phaseCard}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -222,7 +222,7 @@ export default function Pricing() {
             <h3>Strategy</h3>
             <p>Firstly we’ll set a direction, by taking your video goals to heart and making a clear plan to achieve them.</p>
           </motion.div>
-          <motion.div 
+          <motion.div
             className={styles.phaseCard}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +233,7 @@ export default function Pricing() {
             <h3>Production</h3>
             <p>And... action! Fuelled by coffee and sandwiches, our team will get to work filming and editing your video.</p>
           </motion.div>
-          <motion.div 
+          <motion.div
             className={styles.phaseCard}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -276,7 +276,7 @@ export default function Pricing() {
       </div>
 
       {/* Retainer Packages Packages Section */}
-      <motion.div 
+      <motion.div
         className={styles.retainerCard}
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -300,29 +300,30 @@ export default function Pricing() {
       </motion.div>
 
       {/* Background Poster Callout Section */}
-      <div className={styles.posterCallout}>
-        <div 
-          className={styles.posterBg}
-          style={{ backgroundImage: `url('/assets/pricing_bg_poster.png')` }}
-        />
-        <div className={styles.posterOverlay} />
-        <div className={styles.posterContent}>
-          <span className={styles.label} style={{ color: '#ff6b00' }}>Project-Based One-offs</span>
+      <div className={styles.posterSectionContainer}>
+        <div className={styles.posterLeft}>
+          <img
+            src="/assets/blackwomen.png"
+            alt="Hybrid Ads starts from £200 - Unrealr Studios"
+            className={styles.posterSectionImage}
+          />
+        </div>
+        <div className={styles.posterRight}>
           <h2>How much does a professional video cost?</h2>
-          <div className={styles.costHighlight}>
-            One-offs start at £200 + VAT
+          <div className={styles.posterTextCard}>
+            <span className={styles.oneOffLabel}>Project-Based One-offs</span>
+            <p>
+              One-offs: If we’re working on a project basis, prices start at <strong>£200 plus VAT</strong>.
+            </p>
           </div>
-          <p>
-            If we’re working on a project basis, our custom-tailored video production packages are designed to match your production goals.
-          </p>
         </div>
       </div>
 
       {/* QA Deal Section */}
       <div className={styles.dealSection}>
-        <h2>Can you do me a deal on my video price?</h2>
         <div className={styles.dealContent}>
-          <div>
+          <h2>Can you do me a deal on my video price?</h2>
+          <div className={styles.dealText}>
             <p>
               Can we do something for less than £2,500? Maybe. It’s worth asking, especially if it’s just something small, like filming a talk for a couple of hours.
             </p>
@@ -351,8 +352,8 @@ export default function Pricing() {
 
         <div className={styles.roiGrid}>
           {caseStudies.map((study, idx) => (
-            <motion.div 
-              key={idx} 
+            <motion.div
+              key={idx}
               className={styles.roiCard}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -366,8 +367,7 @@ export default function Pricing() {
                 <p>{study.desc}</p>
               </div>
               <div className={styles.roiCardFooter}>
-                <span>View Details</span>
-                <MdArrowOutward />
+
               </div>
             </motion.div>
           ))}
@@ -385,14 +385,14 @@ export default function Pricing() {
       {/* Interactive Modal for Retainer Packages */}
       <AnimatePresence>
         {modalOpen && (
-          <motion.div 
+          <motion.div
             className={styles.modalOverlay}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setModalOpen(false)}
           >
-            <motion.div 
+            <motion.div
               className={styles.modalContent}
               initial={{ scale: 0.9, y: 20, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
@@ -403,7 +403,7 @@ export default function Pricing() {
               <button className={styles.closeModalBtn} onClick={() => setModalOpen(false)}>
                 <MdClose />
               </button>
-              
+
               <div className={styles.modalHeader}>
                 <h2>Video Retainer Packages</h2>
                 <p>Consistent, high-quality video content designed to scale your content marketing campaigns.</p>

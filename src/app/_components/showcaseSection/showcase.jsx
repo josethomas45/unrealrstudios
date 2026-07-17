@@ -6,14 +6,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
   {
-    video: '/assets/locali-ad.webm',
+    video: '/assets/Perfume Ad_03.mp4',
     title: 'Locali',
     type: 'Brand Campaign',
     desc: 'A full brand campaign for Locali — combining AI-assisted visuals and live-action filming to tell a compelling local story.',
     tags: ['Brand Campaign', 'AI Hybrid', 'Commercial'],
   },
   {
-    video: '/assets/dubai-ad.webm',
+    video: '/assets/Locali Ad_01_Final For Client.mp4',
     title: 'Dubai Ad',
     type: 'Commercial',
     desc: 'A high-energy commercial produced for the Dubai market — cinematic visuals, fast cuts, and a premium brand feel on a lean budget.',
@@ -48,7 +48,7 @@ export default function Showcase() {
 
   return (
     <div className={styles.showcase} id='works'>
-      <motion.div 
+      <motion.div
         className={styles.head}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Showcase() {
         <p>Two real campaigns. The start of something unreal.</p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className={styles.grid}
         variants={containerVariants}
         initial="hidden"
@@ -68,10 +68,10 @@ export default function Showcase() {
         viewport={{ once: true, margin: "-100px" }}
       >
         {projects.map((item, index) => (
-          <motion.div 
+          <motion.div
             variants={itemVariants}
-            className={styles.card} 
-            key={index} 
+            className={styles.card}
+            key={index}
             onClick={() => openModal(item.video)}
             whileHover={{ y: -10, scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -112,16 +112,16 @@ export default function Showcase() {
 
       <AnimatePresence>
         {activeVideo && (
-          <motion.div 
-            className={styles.modal} 
-            ref={modalRef} 
+          <motion.div
+            className={styles.modal}
+            ref={modalRef}
             onClick={handleBackdropClick}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <motion.div 
+            <motion.div
               className={styles.modalContent}
               initial={{ scale: 0.9, opacity: 0, y: 40 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}

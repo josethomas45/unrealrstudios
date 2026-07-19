@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
   {
-    video: '/assets/locali-ad.webm',
-    title: 'Locali',
-    type: 'Brand Campaign',
+    video: '/assets/Perfume Ad 03.mp4',
+    title: 'Perfume Ad',
+    type: 'Commercial',
     desc: 'A full brand campaign for Locali — combining AI-assisted visuals and live-action filming to tell a compelling local story.',
     tags: ['Brand Campaign', 'AI Hybrid', 'Commercial'],
   },

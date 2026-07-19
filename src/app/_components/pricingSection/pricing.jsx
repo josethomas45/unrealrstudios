@@ -203,7 +203,7 @@ export default function Pricing() {
         <div className={styles.sectionHeader}>
           <h2>What do I actually get for my money?</h2>
           <p>
-            At Life Media UK, we believe that your videos should be sales and marketing tools – they need to generate you more leads, and convert those leads into sales.
+            At UnrealrStudios, we believe that your videos should be sales and marketing tools – they need to generate you more leads, and convert those leads into sales.
             <br />
             Our mantra has always been <strong>‘Film with Thought’</strong>; the simple idea that we need to think before we film.
             It’s this video strategy that continues to separate us from our competition, and continues to boost results for our clients.
